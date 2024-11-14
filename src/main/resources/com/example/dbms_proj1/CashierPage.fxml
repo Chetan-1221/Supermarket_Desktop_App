@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="cashierPane" prefHeight="1001.0" prefWidth="1100.0" styleClass="main-container" stylesheets="@style2.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dbms_proj1.CashierPage">
+
+    <!-- Set padding using Insets -->
+    <padding>
+        <Insets bottom="20" left="20" right="20" top="20" />
+    </padding>
+
+    <!-- Search Products Section -->
+    <Label styleClass="section-label" text="Search Products" />
+    <HBox maxWidth="800.0" minWidth="800.0" prefWidth="800.0" spacing="10" styleClass="search-box">
+        <TextField fx:id="searchProductField" promptText="Search by ID or Name" />
+        <Button onAction="#handleSearchProducts" text="Search" />
+    </HBox>
+
+    <!-- Product TableView -->
+    <Label styleClass="section-label" text="Products" />
+    <TableView fx:id="productTableView" maxWidth="800.0" minWidth="800.0" prefHeight="200" prefWidth="800.0" styleClass="table-view">
+        <columns>
+            <TableColumn fx:id="productIdColumn" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" text="ID" />
+            <TableColumn fx:id="productNameColumn" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" text="Name" />
+            <TableColumn fx:id="priceColumn" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" text="Price" />
+            <TableColumn fx:id="stockQuantityColumn" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" text="Stock" />
+        </columns>
+    </TableView>
+
+    <HBox maxHeight="50.0" maxWidth="800.0" minHeight="50.0" minWidth="800.0" prefHeight="50.0" prefWidth="800.0" spacing="10" styleClass="button-bar">
+        <Button onAction="#handleAddToOrder" styleClass="action-button" text="Add to Order" />
+    </HBox>
+
+    <!-- Order TableView -->
+    <Label styleClass="section-label" text="Order Items" />
+    <TableView fx:id="orderTableView" maxWidth="800.0" minWidth="800.0" prefHeight="200" prefWidth="800.0" styleClass="table-view">
+        <columns>
+            <TableColumn fx:id="orderProductIdColumn" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" text="ID" />
+            <TableColumn fx:id="orderProductNameColumn" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" text="Name" />
+            <TableColumn fx:id="orderPriceColumn" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" text="Price" />
+            <TableColumn fx:id="orderQuantityColumn" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" text="Quantity" />
+        </columns>
+    </TableView>
+
+    <!-- Customer Details -->
+    <Label styleClass="section-label" text="Customer Details" />
+    <GridPane maxWidth="800.0" minWidth="800.0" prefWidth="800.0" styleClass="customer-details-grid">
+        <TextField fx:id="customerIdField" promptText="Customer ID" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <TextField fx:id="customerNameField" promptText="Customer Name" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <TextField fx:id="customerLocationField" promptText="Location" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <TextField fx:id="customerPhoneField" promptText="Phone" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+        </rowConstraints>
+    </GridPane>
+
+    <!-- Payment Method ComboBox -->
+    <Label styleClass="section-label" text="Payment Method" />
+    <ComboBox fx:id="paymentMethodComboBox" promptText="Select Payment Method" styleClass="combo-box">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="Cash" />
+                <String fx:value="Card" />
+                <String fx:value="UPI" />
+            </FXCollections>
+        </items>
+    </ComboBox>
+
+    <!-- Order Details TextArea -->
+    <Label styleClass="section-label" text="Order Details" />
+    <TextArea fx:id="orderDetailsArea" maxWidth="700.0" minWidth="700.0" prefHeight="100" prefWidth="700.0" styleClass="order-details-text-area" />
+
+    <!-- Buttons -->
+    <HBox maxHeight="50.0" maxWidth="700.0" minHeight="50.0" minWidth="700.0" prefHeight="50.0" prefWidth="700.0" spacing="10" styleClass="button-bar">
+        <Button onAction="#handleGenerateBill" styleClass="action-button" text="Generate Bill" />
+        <Button onAction="#handleRefresh" styleClass="action-button" text="Refresh" />
+    </HBox>
+
+    <!-- Logout Button -->
+    <children>
+        <Button onAction="#handleLogout" styleClass="logout-button" text="Logout">
+            <VBox.margin>
+                <Insets right="10" top="10" />
+            </VBox.margin>
+        </Button>
+    </children>
+
+
+</VBox>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="loginPane" alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="662.0" prefWidth="878.0" spacing="15"
+      styleClass="login-pane" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Label fx:id="titleLabel" alignment="CENTER" styleClass="title-label" text="Supermarket Management System">
+            <font>
+                <Font name="Arial" size="24.0" />
+            </font>
+        </Label>
+        <Label styleClass="input-label" text="Username" />
+        <TextField fx:id="userText" maxWidth="450.0" minHeight="-Infinity" minWidth="450.0"
+                   prefWidth="450.0" promptText="Enter your username" styleClass="input-field" />
+        <Label styleClass="input-label" text="Password" />
+        <PasswordField fx:id="pwBox" maxWidth="450.0" minWidth="450.0" prefWidth="450.0" promptText="Enter your password" styleClass="input-field" />
+        <Button fx:id="loginButton" onAction="#handleLogin" styleClass="login-button" text="Login" />
+        <Button fx:id="signupButton" onAction="#handleSignup" styleClass="signup-button" text="Sign Up" />
+    </children>
+    <padding>
+        <Insets bottom="20" left="20" right="20" top="40" />
+    </padding>
+</VBox>

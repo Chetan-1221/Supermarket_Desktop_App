@@ -1,0 +1,128 @@
+/* Container Styling */
+.admin-pane {
+    -fx-background-color: #f4f4f4; /* Light gray background */
+    -fx-border-color: #ccc; /* Light gray border */
+    -fx-border-width: 1px;
+    -fx-border-radius: 10px;
+    -fx-padding: 20px;
+    -fx-spacing: 15px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 0); /* Drop shadow effect */
+}
+
+/* Title Label Styling */
+.title-label {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333; /* Dark gray text */
+    -fx-padding-bottom: 10px; /* Space below title */
+}
+
+/* Section Label Styling */
+.section-label {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #555; /* Medium gray text */
+    -fx-padding-bottom: 5px; /* Space below section labels */
+}
+
+/* Input Labels Styling */
+.input-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #666; /* Medium gray text */
+}
+
+/* TextField and PasswordField Styling */
+.input-field {
+    -fx-pref-width: 250px;
+    -fx-font-size: 14px;
+    -fx-padding: 10px;
+    -fx-background-color: #fff; /* White background */
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+    -fx-border-color: #ccc;
+    -fx-border-width: 1px;
+}
+
+.input-field:focused {
+    -fx-border-color: #4CAF50; /* Green border on focus */
+}
+
+/* Button Styling */
+.add-button, .search-button.view-order-button {
+    -fx-background-color: #4CAF50; /* Green background */
+    -fx-text-fill: white; /* White text */
+    -fx-font-weight: bold;
+    -fx-padding: 10px 20px;
+    -fx-font-size: 14px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 10, 0.5, 2, 2); /* Drop shadow effect */
+}
+
+.logout-button {
+    -fx-background-color: #FF0000;
+    -fx-text-fill: white; /* White text */
+    -fx-font-weight: bold;
+    -fx-padding: 10px 20px;
+    -fx-font-size: 14px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 5, 0, 0, 0); /* Drop shadow effect */
+}
+
+.add-button:hover, .search-button:hover {
+    -fx-background-color: #45a049; /* Darker green on hover */
+}
+
+.logout-button:hover {
+    -fx-background-color: #B10000; /* Darker green on hover */
+}
+
+/* TableView Styling */
+.table-view {
+    -fx-font-size: 14px;
+    -fx-background-color: white; /* Background color */
+    -fx-border-color: #ccc; /* Border color */
+    -fx-border-width: 1px; /* Border width */
+}
+
+/* TableColumn Styling */
+.table-column {
+    -fx-alignment: CENTER;
+    -fx-font-size: 14px;
+    -fx-padding: 8px;
+}
+
+.table-row-cell {
+    -fx-background-color: #f9f9f9;
+    -fx-text-fill: black;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #f0f0f0; /* Alternating row background color */
+}
+
+/* Hover effect on TableView rows */
+.table-row-cell:hover {
+    -fx-background-color: #e0e0e0; /* Hover background color */
+}
+
+/* Selected row color */
+.table-row-cell:selected {
+    -fx-background-color: #add8e6; /* Selected row background color */
+}
+
+/* Style TableView header */
+.table-header-background {
+    -fx-background-color: #f0f0f0; /* Header background color */
+}
+
+.table-header-label {
+    -fx-font-weight: bold; /* Header label font weight */
+}
+
+/* ScrollPane Styling */
+.table-scroll-pane {
+    -fx-max-height: 200px; /* Max height for TableView */
+    -fx-pref-width: 400px; /* Preferred width for TableView */
+}
